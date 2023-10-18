@@ -1,35 +1,41 @@
-#heart
-n = 14
-m = n+1
 
-for i in range(n//2-1):
-	for j in range(m):
-		
-		if i == n//2-2 and (j == 0 or j == m-1):
-			print("*", end=" ")
-			
-		elif j <= m//2 and ((i+j == n//2-3 and j <= m//4) \
-							or (j-i == m//2-n//2+3 and j > m//4)):
-			print("*", end=" ")
-			
-		elif j > m//2 and ((i+j == n//2-3+m//2 and j < 3*m//4) \
-						or (j-i == m//2-n//2+3+m//2 and j >= 3*m//4)):
-			print("*", end=" ")
+num = ""
 
-		else:
-			print(" ", end=" ")
-	print()
+for j in range(1, 9+1):
+    for i in range(1, 68+1):
+        if j==1 and ((20<= i and i<=22) or (27<= i and i<=29) or i==40 or (46<=i and i<= 48)):
+            num += "*"
+        
+        elif j==2 and ((i==19 or i==23) or (i==26 or i==30) or (i==39 or i==40) or (i==45 or i==49)):
+            num += "*"
+        
+        elif j==3 and (i==23 or (i==26 or i==30) or i==40 or (i==45 or i==49)):
+            num += "*"
+        
+        elif j==4 and (i==22 or (i==26 or i==30) or (33<=i and i<=36) or i==40 or (i==45 or i==49)):
+            num += "*"
+        
+        elif j==5 and (i==21 or (i==26 or i==30) or i==40 or (i==45 or i==49)):
+            num += "*"
+        
+        elif j==6 and ((i==19 or i==20) or(i==26 or i==30) or i==40 or (i==45 or i==49)):
+            num += "*"
+        
+        elif j==7 and ((19<=i and i<=23) or (27<= i and i<=29) or (39<=i and i<=41) or (46<=i and i<= 48)):
+            num += "*"
+        
+        elif j==8 and ():
+            num += "*"
+        
+        elif j==9 and ():
+            num += "*"
+        
+        else:
+            num += " "
+        
+    num += "\n"
 
-for i in range(n//2-1, n):
-	for j in range(m):
-		
-		if (i-j == n//2-1) or (i+j == n-1+m//2):
-			print('*', end=" ")
-
-		else:
-			print(' ', end=" ")
-			
-	print()
+print(num)
 
 
 text=""
@@ -110,3 +116,36 @@ for j in range(34):
     text += "\n"
 
 print(text)
+
+#heart
+n = 14
+m = n+1
+
+for i in range(n//2-1):
+	for j in range(m):
+		
+		if i == n//2-2 and (j == 0 or j == m-1):
+			print("*", end=" ")
+			
+		elif j <= m//2 and ((i+j == n//2-3 and j <= m//4) \
+							or (j-i == m//2-n//2+3 and j > m//4)):
+			print("*", end=" ")
+			
+		elif j > m//2 and ((i+j == n//2-3+m//2 and j < 3*m//4) \
+						or (j-i == m//2-n//2+3+m//2 and j >= 3*m//4)):
+			print("*", end=" ")
+
+		else:
+			print(" ", end=" ")
+	print()
+
+for i in range(n//2-1, n):
+	for j in range(m):
+		
+		if (i-j == n//2-1) or (i+j == n-1+m//2):
+			print('*', end=" ")
+
+		else:
+			print(' ', end=" ")
+			
+	print()
