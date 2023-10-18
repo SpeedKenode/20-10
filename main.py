@@ -1,4 +1,4 @@
-
+import time
 num = ""
 
 for j in range(1, 9+1):
